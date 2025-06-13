@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo Popup</title>
+  <style>
+    body {
+      min-width: 240px;
+      min-height: 140px;
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      background: linear-gradient(135deg, #b6845b 60%, #e2c9b0 100%);
+      color: #3e2723;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(182,132,91,0.12);
+    }
+    h2 {
+      margin: 0 0 18px 0;
+      font-size: 1.3em;
+      color: #fff;
+      letter-spacing: 2px;
+      text-shadow: 1px 2px 8px #b6845b, 0 1px 0 #e2c9b0;
+    }
+    button {
+      background: #ff375f;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 28px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(255,55,95,0.18);
+      transition: background 0.2s, transform 0.2s;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #b6845b;
+      color: #fffbe6;
+      transform: translateY(-2px) scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h2>插件 Demo</h2>
+  <button id="helloBtn">点我试试</button>
+  <button id="copyTextBtn" style="margin-top:12px;background:#3e2723;color:#fff;">复制当前页面文字</button>
+  <script src="popup.js"></script>
+</body>
+</html> 
