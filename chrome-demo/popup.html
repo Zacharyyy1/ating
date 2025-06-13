@@ -3,51 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <title>Demo Popup</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap">
   <style>
     body {
-      min-width: 240px;
-      min-height: 140px;
-      font-family: 'Segoe UI', 'Arial', sans-serif;
-      background: linear-gradient(135deg, #b6845b 60%, #e2c9b0 100%);
-      color: #3e2723;
+      min-width: 280px;
+      min-height: 180px;
+      font-family: 'Montserrat', 'Segoe UI', 'Arial', sans-serif;
+      background: linear-gradient(135deg, #e2c9b0 0%, #b6845b 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    .card {
+      background: rgba(255,255,255,0.95);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(62,39,35,0.18);
+      padding: 32px 28px 24px 28px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      min-width: 240px;
+      max-width: 320px;
+      position: relative;
+      overflow: hidden;
+    }
+    .icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #b6845b 60%, #e2c9b0 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
       justify-content: center;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(182,132,91,0.12);
+      box-shadow: 0 2px 8px rgba(182,132,91,0.18);
+    }
+    .icon svg {
+      width: 28px;
+      height: 28px;
+      color: #fff;
     }
     h2 {
-      margin: 0 0 18px 0;
-      font-size: 1.3em;
-      color: #fff;
-      letter-spacing: 2px;
-      text-shadow: 1px 2px 8px #b6845b, 0 1px 0 #e2c9b0;
+      margin: 0 0 10px 0;
+      font-size: 1.25em;
+      color: #3e2723;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      text-align: center;
     }
-    button {
-      background: #ff375f;
+    .desc {
+      color: #7c5a3a;
+      font-size: 0.98em;
+      margin-bottom: 18px;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .btn {
+      width: 100%;
+      background: linear-gradient(90deg, #ff375f 60%, #b6845b 100%);
       color: #fff;
       border: none;
-      border-radius: 8px;
-      padding: 12px 28px;
+      border-radius: 10px;
+      padding: 13px 0;
       font-size: 1em;
-      font-weight: bold;
+      font-weight: 600;
       cursor: pointer;
-      box-shadow: 0 2px 8px rgba(255,55,95,0.18);
-      transition: background 0.2s, transform 0.2s;
-      margin-top: 10px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(255,55,95,0.12);
+      transition: background 0.2s, transform 0.18s, box-shadow 0.18s;
+      outline: none;
+      letter-spacing: 1px;
     }
-    button:hover {
-      background: #b6845b;
+    .btn:last-child {
+      margin-bottom: 0;
+    }
+    .btn:hover {
+      background: linear-gradient(90deg, #b6845b 60%, #ff375f 100%);
       color: #fffbe6;
-      transform: translateY(-2px) scale(1.05);
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 4px 16px rgba(255,55,95,0.18);
+    }
+    @media (max-width: 350px) {
+      .card { padding: 18px 6px 12px 6px; }
     }
   </style>
 </head>
 <body>
-  <h2>插件 Demo</h2>
-  <button id="helloBtn">点我试试</button>
-  <button id="copyTextBtn" style="margin-top:12px;background:#3e2723;color:#fff;">复制当前页面文字</button>
+  <div class="card">
+    <div class="icon">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M7 17h10M7 13h10M7 9h6M5 21h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <h2>插件 Demo</h2>
+    <div class="desc">一键提取并复制当前页面所有文字，体验潘通2025年度色Mocha Mousse风格！</div>
+    <button class="btn" id="helloBtn">点我试试</button>
+    <button class="btn" id="copyTextBtn">复制当前页面文字</button>
+  </div>
   <script src="popup.js"></script>
 </body>
 </html> 
